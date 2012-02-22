@@ -1,0 +1,350 @@
+michael-netbook
+    description: Notebook
+    version: V1.15
+    width: 32 bits
+    capabilities: smbios-2.6 dmi-2.6
+    configuration: boot=normal chassis=notebook family=Intel_Mobile sku=NetTopSku uuid=FC3C75BF-0B7E-11DF-900A-705AB62A4BEB
+  *-core
+       description: Motherboard
+       product: AO532h
+       vendor: Acer
+       physical id: 0
+       version: V1.15
+       serial: Base Board Serial Number
+       slot: Base Board Chassis Location
+     *-firmware
+          description: BIOS
+          vendor: Acer
+          physical id: 0
+          version: V1.15
+          date: 01/14/2010
+          size: 1MiB
+          capabilities: pci upgrade shadowing cdboot bootselect socketedrom edd int13floppynec int13floppytoshiba int13floppy360 int13floppy1200 int13floppy720 int13floppy2880 int9keyboard int10video acpi usb
+     *-memory
+          description: System Memory
+          physical id: 15
+          slot: System board or motherboard
+          size: 1GiB
+        *-bank
+             description: SODIMM DDR2 Synchronous 667 MHz (1.5 ns)
+             product: 414352313238583634443253383030433620
+             vendor: Kinston
+             physical id: 0
+             serial: 5A26528E
+             slot: DIMM0
+             size: 1GiB
+             width: 64 bits
+             clock: 667MHz (1.5ns)
+     *-cpu
+          description: CPU
+          product: Intel(R) Atom(TM) CPU N450   @ 1.66GHz
+          vendor: Intel Corp.
+          physical id: 1d
+          bus info: cpu@0
+          version: 6.12.10
+          serial: 0001-06CA-0000-0000-0000-0000
+          slot: CPU
+          size: 1666MHz
+          capacity: 1666MHz
+          width: 64 bits
+          clock: 667MHz
+          capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic mtrr pge mca cmov pat clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe constant_tsc arch_perfmon pebs bts aperfmperf pni dtes64 monitor ds_cpl est tm2 ssse3 cx16 xtpr pdcm movbe lahf_lm cpufreq
+          configuration: cores=1 enabledcores=1 id=0 threads=2
+        *-cache:0
+             description: L2 cache
+             physical id: 1e
+             slot: Unknown
+             size: 512KiB
+             capacity: 512KiB
+             capabilities: synchronous internal write-back unified
+        *-cache:1
+             description: L1 cache
+             physical id: 1f
+             slot: Unknown
+             size: 32KiB
+             capacity: 32KiB
+             capabilities: synchronous internal write-back instruction
+        *-logicalcpu:0
+             description: Logical CPU
+             physical id: 0.1
+             width: 64 bits
+             capabilities: logical
+        *-logicalcpu:1
+             description: Logical CPU
+             physical id: 0.2
+             width: 64 bits
+             capabilities: logical
+     *-pci
+          description: Host bridge
+          product: N10 Family DMI Bridge
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 00
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=agpgart-intel
+          resources: irq:0
+        *-display:0
+             description: VGA compatible controller
+             product: N10 Family Integrated Graphics Controller
+             vendor: Intel Corporation
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: msi pm vga_controller bus_master cap_list rom
+             configuration: driver=i915 latency=0
+             resources: irq:43 memory:58180000-581fffff ioport:60c0(size=8) memory:40000000-4fffffff memory:58000000-580fffff
+        *-display:1 UNCLAIMED
+             description: Display controller
+             product: N10 Family Integrated Graphics Controller
+             vendor: Intel Corporation
+             physical id: 2.1
+             bus info: pci@0000:00:02.1
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: latency=0
+             resources: memory:58100000-5817ffff
+        *-multimedia
+             description: Audio device
+             product: N10/ICH 7 Family High Definition Audio Controller
+             vendor: Intel Corporation
+             physical id: 1b
+             bus info: pci@0000:00:1b.0
+             version: 02
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi pciexpress bus_master cap_list
+             configuration: driver=HDA Intel latency=0
+             resources: irq:44 memory:58200000-58203fff
+        *-pci:0
+             description: PCI bridge
+             product: N10/ICH 7 Family PCI Express Port 1
+             vendor: Intel Corporation
+             physical id: 1c
+             bus info: pci@0000:00:1c.0
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:40 ioport:5000(size=4096) memory:57000000-57ffffff ioport:50000000(size=16777216)
+           *-network
+                description: Ethernet interface
+                product: AR8132 Fast Ethernet
+                vendor: Atheros Communications
+                physical id: 0
+                bus info: pci@0000:01:00.0
+                logical name: eth0
+                version: c0
+                serial: 70:5a:b6:2a:4b:eb
+                capacity: 100Mbit/s
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress vpd cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=atl1c driverversion=1.0.1.0-NAPI firmware=N/A latency=0 link=no multicast=yes port=twisted pair
+                resources: irq:45 memory:57000000-5703ffff ioport:5000(size=128)
+        *-pci:1
+             description: PCI bridge
+             product: N10/ICH 7 Family PCI Express Port 2
+             vendor: Intel Corporation
+             physical id: 1c.1
+             bus info: pci@0000:00:1c.1
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:41 ioport:4000(size=4096) memory:56000000-56ffffff ioport:51000000(size=16777216)
+           *-network
+                description: Wireless interface
+                product: AR9285 Wireless Network Adapter (PCI-Express)
+                vendor: Atheros Communications Inc.
+                physical id: 0
+                bus info: pci@0000:02:00.0
+                logical name: wlan0
+                version: 01
+                serial: c4:17:fe:8e:a7:e0
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress bus_master cap_list ethernet physical wireless
+                configuration: broadcast=yes driver=ath9k driverversion=3.0.0-15-generic firmware=N/A ip=192.168.1.7 latency=0 link=yes multicast=yes wireless=IEEE 802.11bgn
+                resources: irq:17 memory:56000000-5600ffff
+        *-usb:0
+             description: USB Controller
+             product: N10/ICH 7 Family USB UHCI Controller #1
+             vendor: Intel Corporation
+             physical id: 1d
+             bus info: pci@0000:00:1d.0
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: uhci bus_master
+             configuration: driver=uhci_hcd latency=0
+             resources: irq:16 ioport:6080(size=32)
+        *-usb:1
+             description: USB Controller
+             product: N10/ICH 7 Family USB UHCI Controller #2
+             vendor: Intel Corporation
+             physical id: 1d.1
+             bus info: pci@0000:00:1d.1
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: uhci bus_master
+             configuration: driver=uhci_hcd latency=0
+             resources: irq:17 ioport:6060(size=32)
+        *-usb:2
+             description: USB Controller
+             product: N10/ICH 7 Family USB UHCI Controller #3
+             vendor: Intel Corporation
+             physical id: 1d.2
+             bus info: pci@0000:00:1d.2
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: uhci bus_master
+             configuration: driver=uhci_hcd latency=0
+             resources: irq:18 ioport:6040(size=32)
+        *-usb:3
+             description: USB Controller
+             product: N10/ICH 7 Family USB UHCI Controller #4
+             vendor: Intel Corporation
+             physical id: 1d.3
+             bus info: pci@0000:00:1d.3
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: uhci bus_master
+             configuration: driver=uhci_hcd latency=0
+             resources: irq:19 ioport:6020(size=32)
+        *-usb:4
+             description: USB Controller
+             product: N10/ICH 7 Family USB2 EHCI Controller
+             vendor: Intel Corporation
+             physical id: 1d.7
+             bus info: pci@0000:00:1d.7
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm debug ehci bus_master cap_list
+             configuration: driver=ehci_hcd latency=0
+             resources: irq:16 memory:58204400-582047ff
+        *-pci:2
+             description: PCI bridge
+             product: 82801 Mobile PCI Bridge
+             vendor: Intel Corporation
+             physical id: 1e
+             bus info: pci@0000:00:1e.0
+             version: e2
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci subtractive_decode bus_master cap_list
+        *-isa
+             description: ISA bridge
+             product: NM10 Family LPC Controller
+             vendor: Intel Corporation
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master cap_list
+             configuration: latency=0
+        *-storage
+             description: SATA controller
+             product: N10/ICH7 Family SATA AHCI Controller
+             vendor: Intel Corporation
+             physical id: 1f.2
+             bus info: pci@0000:00:1f.2
+             logical name: scsi0
+             version: 02
+             width: 32 bits
+             clock: 66MHz
+             capabilities: storage msi pm ahci_1.0 bus_master cap_list emulated
+             configuration: driver=ahci latency=0
+             resources: irq:42 ioport:60b8(size=8) ioport:60cc(size=4) ioport:60b0(size=8) ioport:60c8(size=4) ioport:60a0(size=16) memory:58204000-582043ff
+           *-disk
+                description: ATA Disk
+                product: Hitachi HTS54502
+                vendor: Hitachi
+                physical id: 0.0.0
+                bus info: scsi@0:0.0.0
+                logical name: /dev/sda
+                version: PB2O
+                serial: 100112PB42061SK01HMM
+                size: 232GiB (250GB)
+                capabilities: gpt-1.00 partitioned partitioned:gpt
+                configuration: ansiversion=5 guid=93a23616-a230-4d8c-8b8d-4a31d1d2dd17
+              *-volume:0
+                   description: EXT4 volume
+                   vendor: Linux
+                   physical id: 1
+                   bus info: scsi@0:0.0.0,1
+                   logical name: /dev/sda1
+                   logical name: /
+                   version: 1.0
+                   serial: a6675ebf-5ed6-4c9d-b1f1-7515a5dad5af
+                   size: 74GiB
+                   capacity: 74GiB
+                   capabilities: journaled extended_attributes large_files huge_files dir_nlink recover extents ext4 ext2 initialized
+                   configuration: created=2011-12-12 07:02:35 filesystem=ext4 lastmountpoint=/ modified=2012-01-28 23:04:08 mount.fstype=ext4 mount.options=rw,relatime,errors=remount-ro,user_xattr,acl,barrier=1,data=ordered mounted=2012-02-15 11:11:42 state=mounted
+              *-volume:1
+                   description: Data partition
+                   physical id: 2
+                   bus info: scsi@0:0.0.0,2
+                   logical name: /dev/sda2
+                   logical name: /media/Data
+                   serial: f736b86e-d791-4e47-95f7-80d897dbff25
+                   capacity: 69GiB
+                   configuration: mount.fstype=btrfs mount.options=rw,relatime state=mounted
+              *-volume:2
+                   description: EXT4 volume
+                   vendor: Linux
+                   physical id: 3
+                   bus info: scsi@0:0.0.0,3
+                   logical name: /dev/sda3
+                   logical name: /media/Backup
+                   version: 1.0
+                   serial: 38c3a3dd-b2d3-4b34-b8f1-d7e51d876cf6
+                   size: 51GiB
+                   capacity: 51GiB
+                   capabilities: journaled extended_attributes large_files huge_files dir_nlink recover extents ext4 ext2 initialized
+                   configuration: created=2011-12-12 07:02:39 filesystem=ext4 label=BackupEnvironmen lastmountpoint=/media/Backup modified=2012-02-15 11:11:43 mount.fstype=ext4 mount.options=rw,relatime,user_xattr,acl,barrier=1,data=ordered mounted=2012-02-15 11:11:43 state=mounted
+              *-volume:3
+                   description: Linux swap volume
+                   physical id: 4
+                   bus info: scsi@0:0.0.0,4
+                   logical name: /dev/sda4
+                   version: 1
+                   serial: 41c87c14-44db-4f69-9132-3c08609447ea
+                   size: 1907MiB
+                   capacity: 1907MiB
+                   capabilities: nofs swap initialized
+                   configuration: filesystem=swap pagesize=4096
+              *-volume:4
+                   description: Windows NTFS volume
+                   physical id: 5
+                   bus info: scsi@0:0.0.0,5
+                   logical name: /dev/sda5
+                   version: 3.1
+                   serial: 1215-d540
+                   size: 35GiB
+                   capacity: 35GiB
+                   capabilities: ntfs initialized
+                   configuration: clustersize=4096 created=2012-02-15 08:54:44 filesystem=ntfs state=clean
+        *-serial UNCLAIMED
+             description: SMBus
+             product: N10/ICH 7 Family SMBus Controller
+             vendor: Intel Corporation
+             physical id: 1f.3
+             bus info: pci@0000:00:1f.3
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             configuration: latency=0
+             resources: ioport:6000(size=32)
