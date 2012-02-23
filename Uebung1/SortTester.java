@@ -1,7 +1,7 @@
 /**
  * File: SortTester.java
  * Autoren:
- *   - Lukas Diener - 
+ *   - Lukas Diener - 11-123-213
  *   - Michael Kohler - 11-108-289
  * Einfaches Testprogramm der Sortieralgorithmen.
  */
