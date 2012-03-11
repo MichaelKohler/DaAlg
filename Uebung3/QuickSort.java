@@ -1,8 +1,12 @@
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Random;
 
 /**
  * File: QuickSort.java
+ * Autoren: Originale Datei mit Anpassungen von
+ *   Lukas Diener - 11-123-213
+ *   Michael Kohler - 11-108-289
  *
  * Implementation von Quicksort. Verwendet generische ArrayList für Eingabedaten
  * und generischen Comparator um Datenelemente zu vergleichen. 
@@ -16,8 +20,10 @@ public static <T> void quickSort(ArrayList<T> array, int left, int right, Compar
 	if (right>left) {  // Abbruchbedingung der Rekursion
 		T temp;        // temporaere Hilfsvariable zum swappen
   
-		// *** 1. Pivotelement selektieren:
-		T pivot = array.get(right);
+		// *** 1. Pivotelement selektieren (Random):
+		Random generator = new Random();
+		int randomElement = generator.nextInt(right-left) + left;
+		T pivot = array.get(randomElement);
   
 		// *** 2. Aufteilung in Subsequenzen durchfuehren:
 		int l = left-1;

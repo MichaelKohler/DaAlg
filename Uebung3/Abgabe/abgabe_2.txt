@@ -1,0 +1,24 @@
+Autoren:
+Lukas Diener - 11-123-213
+Michael Kohler - 11-108-289
+
+
+Aufgabe 2 des praktischen Teil:
+
+Was fällt auf?
+Es fällt auf, dass die Laufzeit des 2. Durchlaufs länger dauert. Dies ist,
+weil eine sortierte Eingabe für den Quicksort (nicht randomized) die Worst-Case
+Laufzeit von Θ(n^2) erreicht. Ausserdem erhält man bei 3200 Elementen
+(ist abhängig von der Umgebung) eine StackOverflowException.
+
+Was ist ein Stack Overflow?
+Ein Stack Overflow geschieht, wenn zu viele Daten in den Stack geschrieben werden.
+Genauer gesagt heisst das, dass mehr Speicher geschrieben wird, als reserviert
+wurde und dadurch Speicher überschrieben wird, welcher nicht dem Programm gehört.
+So wird auch die Rücksprungadresse überschrieben. In Java kommen Stack Overflows
+selten vor, da die Ausführung im ByteCode überwacht wird. C-Programme sind anfälliger
+(z.B., wenn bei strcopy() die Länge nicht überprüft wird).
+
+Der Stack Overflow tritt auf, da wir rekursiv sortieren. Durch rekursive
+Programmierung wird tendenziell mehr Speicherplatz benötigt (und ab einer gewissen
+Anzahl Elemente mehr als reserviert ist).

@@ -28,14 +28,14 @@ public class MiniTestApp {
     // Comparator bestimmt hinsichtlich was sortiert werden soll
     
     // Hier wird der vorgegebene MatrikelNrComparator verwendet:
-    java.util.Comparator<StudentIn> comp = new MatrikelNrComparator();
+    //java.util.Comparator<StudentIn> comp = new MatrikelNrComparator();
     
     // Testen Sie Ihren neuen NameVornameComparator indem Sie diesen Code
     // verwenden:
-//  java.util.Comparator<StudentIn> comp = new NameVornameComparator();
+    java.util.Comparator<StudentIn> comp = new NameVornameComparator();
     
     // Sortieren mit QuickSort
-	QuickSort.quickSort(array, 0 , array.size()-1, comp);
+	  QuickSort.quickSort(array, 0 , array.size()-1, comp);
 
     //*** Array ausgeben:
     System.out.println("MatrikelNr Name Vorname");
